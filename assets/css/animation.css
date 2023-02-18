@@ -1,0 +1,72 @@
+
+/* ------------SNOW------------ */
+
+
+
+.snowflake {
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.752);
+
+    position: fixed;
+    right: 100%;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+            animation-name: snowflakes-fall, snowflakes-shake;
+    -webkit-animation-timing-function: linear, ease-in-out;
+            animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: infinite, infinite;
+            animation-iteration-count: infinite, infinite;
+    -webkit-animation-play-state: running, running;
+            animation-play-state: running, running;
+    
+    will-change: top, left;
+}
+
+@-webkit-keyframes snowflakes-fall {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes snowflakes-fall {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+@-webkit-keyframes snowflakes-shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(80px);
+                transform: translateX(80px);
+    }
+}
+@keyframes snowflakes-shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(80px);
+                transform: translateX(80px);
+    }
+}

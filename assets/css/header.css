@@ -1,0 +1,146 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*-------------------------------HEADER----------------------------*/
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    z-index: 10000;
+}
+
+.header__title {
+    position: absolute;
+    z-index: 101;
+    color: white;
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+.header__layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.header__layer > div {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(61, 61, 61);
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    will-change: width;
+    will-change: opacity;
+}
+
+.header__layer__left {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+}
+
+.header__img-box {
+    position: absolute;
+    overflow: hidden;
+
+    -webkit-transform-origin: left;
+
+        -ms-transform-origin: left;
+
+            transform-origin: left;
+    will-change: transform;
+}
+
+.header__layer > div:first-child > div {
+    -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+            transform-origin: right;
+}
+.header__layer > div > div:last-child {
+    -webkit-transform: scale(0%);
+        -ms-transform: scale(0%);
+            transform: scale(0%);
+    will-change: transform;
+
+    -webkit-transition: -webkit-transform 1s linear;
+
+    transition: -webkit-transform 1s linear;
+
+    -o-transition: transform 1s linear;
+
+    transition: transform 1s linear;
+
+    transition: transform 1s linear, -webkit-transform 1s linear;
+}
+
+.header__img-box > img {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-user-drag: none;
+    width: 100px;
+}
+
+
+
+@-webkit-keyframes slide-header {
+    from {
+        width: 50%;
+        opacity: 1;
+    }
+    to {
+        width: 0%;
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes slide-header {
+    from {
+        width: 50%;
+        opacity: 1;
+    }
+    to {
+        width: 0%;
+        opacity: 0;
+    }
+}
